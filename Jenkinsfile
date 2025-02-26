@@ -26,7 +26,7 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage("deployment the project on tomcat-sowji"){
+        stage("deploy the project on tomcat"){
             steps{
                 sh "sudo mv /var/lib/jenkins/workspace/mypipeline/target/addressbook.war /home/ubuntu/apache-tomcat-8.5.100/webapps/"
             }
